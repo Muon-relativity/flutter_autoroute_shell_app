@@ -6,7 +6,13 @@ import 'guards/auth_guard.dart';
 
 // pages
 import '../features/home/home_page.dart';
+import '../features/home/home_tab_page.dart';
 import '../features/auth/login_page.dart';
+import '../features/search/search_page.dart';
+import '../features/search/search_tab_page.dart';
+import '../features/settings/settings_page.dart';
+import '../features/settings/settings_tab_page.dart';
+import '../features/shell/app_shell_page.dart';
 
 part 'app_router.gr.dart';
 
@@ -21,7 +27,11 @@ class AppRouter extends RootStackRouter {
 
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: HomeRoute.page, initial: true, guards: [authGuard]),
+        AutoRoute(page: AppShellRoute.page, initial: true, guards: [authGuard], children: [
+          AutoRoute(page: HomeTabRoute.page, children: [AutoRoute(page: HomeRoute.page, initial: true)]),
+          AutoRoute(page: SearchTabRoute.page, children: [AutoRoute(page: SearchRoute.page, initial: true)]),
+          AutoRoute(page: SettingsTabRoute.page, children: [AutoRoute(page: SettingsRoute.page, initial: true)]),
+        ]),
         AutoRoute(page: LoginRoute.page),
       ];
 }

@@ -1,6 +1,8 @@
 
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_autoroute_shell_app/router/app_router.dart';
 
 @RoutePage()
 class LoginPage extends StatelessWidget {
@@ -16,7 +18,10 @@ class LoginPage extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: onLoginCallback,
+          onPressed: (){
+            onLoginCallback?.call();
+            context.router.replaceAll([const AppShellRoute()]);
+          },
           child: const Text('Login'),
         ),
       ),

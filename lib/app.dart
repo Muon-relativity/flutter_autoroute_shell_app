@@ -24,8 +24,38 @@ class _AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: _router.config(),
+    return SessionScope(
+      session: _session,
+      child: MaterialApp.router(
+        routerConfig: _router.config(),
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+      ),
     );
+  }
+}
+
+class SessionScope extends InheritedWidget {
+  final Session session;
+
+  const SessionScope({
+    super.key,
+    required this.session,
+    required super.child,
+  });
+
+  static Session of(BuildContext context) {
+    final scope = context.dependOnInheritedWidgetOfExactType<SessionScope>();
+    if (scope == null) {
+      throw Exception('No SessionScope found in context');
+    }
+    return scope.session;
+  }
+
+  @override
+  bool updateShouldNotify(covariant SessionScope oldWidget) {
+    return oldWidget.session != session;
   }
 }

@@ -1,6 +1,6 @@
 
 import 'package:auto_route/annotations.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 @RoutePage()
 class HomePage extends StatelessWidget {
@@ -8,11 +8,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
+    return const CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('Home Page'),
       ),
-      body: const Center(
+      child: Center(
         child: Text(
           'Welcome to the Home Page!',
           style: TextStyle(fontSize: 24),

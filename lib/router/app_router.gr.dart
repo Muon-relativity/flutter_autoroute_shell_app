@@ -11,6 +11,22 @@
 part of 'app_router.dart';
 
 /// generated route for
+/// [AppShellPage]
+class AppShellRoute extends PageRouteInfo<void> {
+  const AppShellRoute({List<PageRouteInfo>? children})
+    : super(AppShellRoute.name, initialChildren: children);
+
+  static const String name = 'AppShellRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AppShellPage();
+    },
+  );
+}
+
+/// generated route for
 /// [HomePage]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -22,6 +38,22 @@ class HomeRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const HomePage();
+    },
+  );
+}
+
+/// generated route for
+/// [HomeTabPage]
+class HomeTabRoute extends PageRouteInfo<void> {
+  const HomeTabRoute({List<PageRouteInfo>? children})
+    : super(HomeTabRoute.name, initialChildren: children);
+
+  static const String name = 'HomeTabRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const HomeTabPage();
     },
   );
 }
@@ -71,4 +103,68 @@ class LoginRouteArgs {
 
   @override
   int get hashCode => key.hashCode ^ onLoginCallback.hashCode;
+}
+
+/// generated route for
+/// [SearchPage]
+class SearchRoute extends PageRouteInfo<void> {
+  const SearchRoute({List<PageRouteInfo>? children})
+    : super(SearchRoute.name, initialChildren: children);
+
+  static const String name = 'SearchRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SearchPage();
+    },
+  );
+}
+
+/// generated route for
+/// [SearchTabPage]
+class SearchTabRoute extends PageRouteInfo<void> {
+  const SearchTabRoute({List<PageRouteInfo>? children})
+    : super(SearchTabRoute.name, initialChildren: children);
+
+  static const String name = 'SearchTabRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SearchTabPage();
+    },
+  );
+}
+
+/// generated route for
+/// [SettingsPage]
+class SettingsRoute extends PageRouteInfo<void> {
+  const SettingsRoute({List<PageRouteInfo>? children})
+    : super(SettingsRoute.name, initialChildren: children);
+
+  static const String name = 'SettingsRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SettingsPage();
+    },
+  );
+}
+
+/// generated route for
+/// [SettingsTabPage]
+class SettingsTabRoute extends PageRouteInfo<void> {
+  const SettingsTabRoute({List<PageRouteInfo>? children})
+    : super(SettingsTabRoute.name, initialChildren: children);
+
+  static const String name = 'SettingsTabRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SettingsTabPage();
+    },
+  );
 }

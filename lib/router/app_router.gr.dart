@@ -59,6 +59,22 @@ class HomeTabRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [IntroductionPage]
+class IntroductionRoute extends PageRouteInfo<void> {
+  const IntroductionRoute({List<PageRouteInfo>? children})
+    : super(IntroductionRoute.name, initialChildren: children);
+
+  static const String name = 'IntroductionRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const IntroductionPage();
+    },
+  );
+}
+
+/// generated route for
 /// [LoginPage]
 class LoginRoute extends PageRouteInfo<LoginRouteArgs> {
   LoginRoute({
@@ -165,6 +181,22 @@ class SettingsTabRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const SettingsTabPage();
+    },
+  );
+}
+
+/// generated route for
+/// [StartPage]
+class StartRoute extends PageRouteInfo<void> {
+  const StartRoute({List<PageRouteInfo>? children})
+    : super(StartRoute.name, initialChildren: children);
+
+  static const String name = 'StartRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const StartPage();
     },
   );
 }

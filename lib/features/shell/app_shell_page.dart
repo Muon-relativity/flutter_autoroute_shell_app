@@ -1,7 +1,6 @@
 
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_autoroute_shell_app/features/home/home_tab_page.dart';
 
 import '../../router/app_router.dart';
 
